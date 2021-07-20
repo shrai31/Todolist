@@ -15,7 +15,7 @@ const item2 = {
 }
 
 function App() {
-  const [text, setText] = useState("")
+  const [text, setText] = useState("") 
   const [state, setState] = useState({
     "todo": {
       title: "Today Task",
@@ -69,7 +69,7 @@ function App() {
       return {
         ...prev,
         todo: {
-          title: "Todo",
+          title: "Today Task",
           items: [
             {
               id: v4(),
