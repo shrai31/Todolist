@@ -9,7 +9,7 @@ const item = {
   name: "Clean the house"
 }
 
-const item2 = {
+const item1 = {
   id: v4(),
   name: "Wash the car"
 }
@@ -19,7 +19,7 @@ function App() {
   const [state, setState] = useState({
     "todo": {
       title: "Today Task",
-      items: [item, item2]
+      items: [item, item1]
     },
     "in-progress": {
       title: "In Progress",
@@ -97,6 +97,7 @@ function App() {
               <h3>{data.title}</h3>
               <Droppable droppableId={key}>
                 {(provided, snapshot) => {
+                  console.log(snapshot)
                   return(
                     <div
                       ref={provided.innerRef}
